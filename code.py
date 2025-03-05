@@ -1,6 +1,5 @@
 # Created by Clara T
 
-<<<<<<< HEAD
 # Created on Feb 2025
 
 # Blink with Breadboard and LED with resistor
@@ -23,41 +22,44 @@ PIN_12.direction = digitalio.Direction.OUTPUT
 
 
 while True:
-
+        # Green
         PIN_11.value = TRUE
-        time.sleep(1)
-        PIN_11.value = FALSE
-
-        PIN_12.value = TRUE
-        time.sleep(1)
-        PIN_12.value = FALSE
-
-        PIN_13.value = TRUE
-        time.sleep(1)
-        PIN_13.value = FALSE
-
-        PIN_11.value = TRUE
-        PIN_12.value = TRUE
-        time.sleep(1)
-        PIN_11.value = FALSE
-        PIN_12.value = FALSE
-
-        PIN_11.value = TRUE
-        PIN_13.value = TRUE
-        time.sleep(1)
-        PIN_11.value = FALSE
-        PIN_13.value = FALSE
-
-        PIN_13.value = TRUE
-        PIN_12.value = TRUE
-        time.sleep(1)
-        PIN_13.value = FALSE
-        PIN_12.value = FALSE
-
-        PIN_11.value = TRUE
-        PIN_12.value = TRUE
-        PIN_13.value = TRUE
-        time.sleep(1)
-        PIN_11.value = FALSE
         PIN_12.value = FALSE
         PIN_13.value = FALSE
+        time.sleep(1)
+
+        # Blue
+        PIN_11.value = False
+        PIN_12.value = TRUE
+        PIN_13.value = FALSE
+        time.sleep(1)
+
+        # Red
+        PIN_11.value = FALSE
+        PIN_12.value = FALSE
+        PIN_13.value = TRUE
+        time.sleep(1)
+
+        # Teal
+        PIN_11.value = TRUE
+        PIN_12.value = TRUE
+        PIN_13.value = FALSE
+        time.sleep(1)
+
+        # Yellow
+        PIN_11.value = TRUE
+        PIN_12.value = FALSE
+        PIN_13.value = TRUE
+        time.sleep(1)
+
+        # Purple
+        PIN_11.value = FALSE
+        PIN_12.value = TRUE
+        PIN_13.value = TRUE
+        time.sleep(1)
+
+        # White
+        PIN_11.value = TRUE
+        PIN_12.value = TRUE
+        PIN_13.value = TRUE
+        time.sleep(1)
