@@ -11,55 +11,56 @@ import time
 import board
 import digitalio
 
-PIN_13 = digitalio.DigitalInOut(board.GP13)  # Red
-PIN_13.direction = digitalio.Direction.OUTPUT
+LED_GREEN = digitalio.DigitalInOut(board.GP11)
+LED_BLUE = digitalio.DigitalInOut(board.GP12)
+LED_RED = digitalio.DigitalInOut(board.GP13)
 
-PIN_11 = digitalio.DigitalInOut(board.GP11) # Green
-PIN_11.direction = digitalio.Direction.OUTPUT
+LED_GREEN.direction = digitalio.Direction.OUTPUT
+LED_BLUE.direction = digitalio.Direction.OUTPUT
+LED_RED.direction = digitalio.Direction.OUTPUT
 
-PIN_12 = digitalio.DigitalInOut(board.GP12)  # Blue
-PIN_12.direction = digitalio.Direction.OUTPUT
+blink_time = 1
 
-
+# loop forever
 while True:
-        # Green
-        PIN_11.value = TRUE
-        PIN_12.value = FALSE
-        PIN_13.value = FALSE
-        time.sleep(1)
+    # GREEN
+    LED_GREEN.value = True
+    LED_BLUE.value = False
+    LED_RED.value = False 
+    time.sleep(blink_time) 
 
-        # Blue
-        PIN_11.value = False
-        PIN_12.value = TRUE
-        PIN_13.value = FALSE
-        time.sleep(1)
+    # BLUE
+    LED_GREEN.value = False
+    LED_BLUE.value = True 
+    LED_RED.value = False
+    time.sleep(blink_time) 
 
-        # Red
-        PIN_11.value = FALSE
-        PIN_12.value = FALSE
-        PIN_13.value = TRUE
-        time.sleep(1)
+    # RED
+    LED_GREEN.value = False
+    LED_BLUE.value = False 
+    LED_RED.value = True
+    time.sleep(blink_time) 
 
-        # Teal
-        PIN_11.value = TRUE
-        PIN_12.value = TRUE
-        PIN_13.value = FALSE
-        time.sleep(1)
+    # YELLOW
+    LED_GREEN.value = True
+    LED_BLUE.value = False 
+    LED_RED.value = True
+    time.sleep(blink_time)  
 
-        # Yellow
-        PIN_11.value = TRUE
-        PIN_12.value = FALSE
-        PIN_13.value = TRUE
-        time.sleep(1)
+    # CYAN
+    LED_GREEN.value = True
+    LED_BLUE.value = True 
+    LED_RED.value = False
+    time.sleep(blink_time) 
 
-        # Purple
-        PIN_11.value = FALSE
-        PIN_12.value = TRUE
-        PIN_13.value = TRUE
-        time.sleep(1)
+    # MAGENTA
+    LED_GREEN.value = False
+    LED_BLUE.value = True 
+    LED_RED.value = True
+    time.sleep(blink_time)   
 
-        # White
-        PIN_11.value = TRUE
-        PIN_12.value = TRUE
-        PIN_13.value = TRUE
-        time.sleep(1)
+    # GREEN
+    LED_GREEN.value = True
+    LED_BLUE.value = True 
+    LED_RED.value = True
+    time.sleep(blink_time) 
